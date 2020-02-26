@@ -1,26 +1,19 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { connect } from 'react-redux'
 
-const setter = (props) => {
+const SetterJSX = (props) => {
 
-  // useState
-  let a = 5
+  const [amount, setAmount] = useState(0);
 
   return (
     <div className="unit">
       <h3>Setter</h3>
       <div>
-        <input id="input" onChange={(e) => console.log(e.target.value)}></input>
+        <input id="input" onChange={(e) => setAmount(e.target.value)}></input>
       </div>
-      <button onClick={() => props.set(a)}>set</button>
+      <button onClick={() => props.set(amount)}>set</button>
     </div>
   )
-}
-
-const mapStateToProps = state => {
-  return {
-    counter: state.counter
-  }
 }
 
 const mapDispatchToProps = dispatch => {
@@ -31,6 +24,6 @@ const mapDispatchToProps = dispatch => {
   }
 }
 
-const Setter = connect(mapStateToProps, mapDispatchToProps)(setter)
+const Setter = connect(null, mapDispatchToProps)(SetterJSX)
 
 export default Setter
