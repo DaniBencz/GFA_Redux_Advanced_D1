@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { connect } from 'react-redux'
 
-const SetterJSX = (props) => {
+const SetterJSX = (props) => {  // to use Hooks, gotta start with capital letter!
 
   const [amount, setAmount] = useState(0);
 

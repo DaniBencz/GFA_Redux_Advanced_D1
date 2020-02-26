@@ -17,7 +17,7 @@ const counterReducer = (counter = 0, action) => { // counter is the initial stat
   }
 }
 
-const tagReducer = (tags = [], action) => {
+const tagReducer = (tags = ['blue', 'bold', 'hipster'], action) => {
   //console.log('tags reducer: ', tags)
   switch (action.type) {
     case 'ADD_TAG':

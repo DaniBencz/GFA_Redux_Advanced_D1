@@ -17,7 +17,8 @@
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   font-size: calc(10px + 2vmin);
   color: white;
 }
@@ -37,4 +38,14 @@
 
 .unit{
   margin: 5px;
+}
+
+#upper-row{
+  display: inherit;
+}
+
+.tag{
+  background-color: lightblue;
+  margin: 3px;
+  padding: 3px;
 }
