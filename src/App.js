@@ -3,6 +3,7 @@ import './App.css'
 import Increaser from './components/increaser'
 import Decreaser from './components/decreaser'
 import Resetter from './components/resetter'
+import Setter from './components/setter'
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <Increaser></Increaser>
         <Decreaser></Decreaser>
         <Resetter></Resetter>
+        <Setter></Setter>
       </header>
     </div>
   );

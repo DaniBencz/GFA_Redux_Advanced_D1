@@ -2,13 +2,17 @@ import React from 'react'
 import { connect } from 'react-redux'
 
 const setter = (props) => {
+
+  // useState
+  let a = 5
+
   return (
     <div className="unit">
       <h3>Setter</h3>
       <div>
-        {props.counter}
+        <input id="input" onChange={(e) => console.log(e.target.value)}></input>
       </div>
-      <button onClick={props.set}>set</button>
+      <button onClick={() => props.set(a)}>set</button>
     </div>
   )
 }
@@ -21,8 +25,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    set: () => {
-      dispatch({ type: 'SET', amount() })
+    set: (value) => {
+      dispatch({ type: 'SET', amount: value })
     }
   }
 }
